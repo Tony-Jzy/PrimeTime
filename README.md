@@ -3,3 +3,6 @@
 ### Ideas: <br>
 **Instagram 'Prime Time' to Post** <br>
 For this application, we would make use of Instagram's API to see how many of your active followers are online at a given moment in time. We would then use this information to alert the user when it's the best time to post. In the app, the user would set a threshhold of a percentage of how many users they'd want to be online, and once that threshold is reached, the app would send a push notification to alert the user that it's time to post! This app could be used for businesses promoting their products and services on Instagram, along with any basic user just trying to maximize their likes.
+
+***Travel - Food - Spotify** <br>
+For this idea we intend to use Expedia, Spotify, and Yelp to essentially create a web based application that would help users get more in tune with the place they would be visiting. Assuming you like to travel at a moments notice all we would need is the destination, dates, and length of stay. With that information we can create a playlist for the duration of your flight choosing popular songs from the country you are visiting. On top of that we would create a list of recommended restaurants for you to visit during your stay.
