@@ -1,0 +1,6 @@
+{
+    "require": {
+        "raiym/instagram-php-scraper": "^0.8.14",
+        "zircote/swagger-php": "^2.0"
+    }
+}

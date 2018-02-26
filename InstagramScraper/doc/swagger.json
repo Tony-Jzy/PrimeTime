@@ -1,0 +1,244 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "InstagramScraper",
+        "description": "InstagramScraper API tests. I only listed partial of them. There are still more data can be provided. If any more needed I can try to figure how to get those.",
+        "version": "V1.0.0"
+    },
+    "host": "localhost/InstagramScraper/examples",
+    "schemes": [
+        "http"
+    ],
+    "consumes": [
+        "multipart/form-data"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/getAccountById.php": {
+            "get": {
+                "tags": [
+                    "Account"
+                ],
+                "summary": "",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "username",
+                        "in": "query",
+                        "description": "username",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "password",
+                        "in": "query",
+                        "description": "password",
+                        "required": false,
+                        "type": "string"
+                    }
+                ]
+            }
+        },
+        "/getAccountFollowers.php": {
+            "get": {
+                "tags": [
+                    "Account"
+                ],
+                "summary": "",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "username",
+                        "in": "query",
+                        "description": "username",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "password",
+                        "in": "query",
+                        "description": "password",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "count",
+                        "in": "query",
+                        "description": "count",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "pageSize",
+                        "in": "query",
+                        "description": "pageSize",
+                        "required": false,
+                        "type": "integer"
+                    }
+                ]
+            }
+        },
+        "/getAccountMediasByUsername.php": {
+            "get": {
+                "tags": [
+                    "Account"
+                ],
+                "summary": "",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "username",
+                        "in": "query",
+                        "description": "username",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "password",
+                        "in": "query",
+                        "description": "password",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "count",
+                        "in": "query",
+                        "description": "count",
+                        "required": false,
+                        "type": "integer"
+                    }
+                ]
+            }
+        },
+        "/getCurrentTopMediasByLocationId.php": {
+            "get": {
+                "tags": [
+                    "Account"
+                ],
+                "summary": "",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "username",
+                        "in": "query",
+                        "description": "username",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "password",
+                        "in": "query",
+                        "description": "password",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "locationId",
+                        "in": "query",
+                        "description": "locationId",
+                        "required": true,
+                        "type": "string"
+                    }
+                ]
+            }
+        },
+        "/getCurrentTopMediasByTagName.php": {
+            "get": {
+                "tags": [
+                    "Account"
+                ],
+                "summary": "",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "username",
+                        "in": "query",
+                        "description": "username",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "password",
+                        "in": "query",
+                        "description": "password",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "tag",
+                        "in": "query",
+                        "description": "tag",
+                        "required": true,
+                        "type": "string"
+                    }
+                ]
+            }
+        },
+        "/getMediaComments.php": {
+            "get": {
+                "tags": [
+                    "Account"
+                ],
+                "summary": "",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "username",
+                        "in": "query",
+                        "description": "username",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "password",
+                        "in": "query",
+                        "description": "password",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "code",
+                        "in": "query",
+                        "description": "code",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "description": "commentId",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "count",
+                        "in": "query",
+                        "description": "count",
+                        "required": false,
+                        "type": "string"
+                    }
+                ]
+            }
+        }
+    },
+    "definitions": {
+        "Response": {
+            "properties": {
+                "success": {
+                    "type": "boolean",
+                    "example": true
+                },
+                "error": {
+                    "type": "string",
+                    "example": "\u9519\u8bef\u4fe1\u606f"
+                }
+            },
+            "type": "object",
+            "xml": {
+                "name": "Response"
+            }
+        }
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "InstagramScraper",
+        "description": "InstagramScraper API tests. I only listed partial of them. If we need more, there is ",
+        "version": "V1.0"
+    },
+    "host": "localhost/InstagramScraper/examples",
+    "schemes": [
+        "http"
+    ],
+    "consumes": [
+        "multipart/form-data"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths": {},
+    "definitions": {}
+}
