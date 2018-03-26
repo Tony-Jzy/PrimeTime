@@ -1,6 +1,6 @@
 <?php
 
-require_once(dirname(__FILE__).'/'.'define.php');
+require_once 'define.php';
 
 class DB{
 	 private static $instance = null;

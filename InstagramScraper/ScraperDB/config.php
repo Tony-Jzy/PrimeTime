@@ -13,7 +13,7 @@ $dbuser = "shinji";
 // Database password
 $dbpasswd = "JzyMucun1996";
 // Database type (mysqli/mysql)
-$dbtype = 'mysql';
+$dbtype = 'mysqli';
 // Database character sets (utf8/gbk)
 $dbcharset = 'utf8';
 
