@@ -10,7 +10,7 @@ And in your terminal, start up your Apache server by running command:
 
 Then to your browser: 
 
-> localhost/Instagram/swagger/index.html
+> localhost/instagramScraper/swagger/index.html
 
 You can try input and get the output JSON.
 
