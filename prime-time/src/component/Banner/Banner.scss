@@ -1,0 +1,35 @@
+.Banner {
+  height: 10vh;
+  display: flex;
+  color: #222222;
+  flex-direction: column;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 2;
+  overflow: visible;
+
+  .scrolled-shadow {
+    opacity: 1;
+    box-shadow: 0 6px 10px 0 rgba(0,0,0,0.20);
+    height: 1vh;
+    width: 100vw;
+    position: relative;
+    margin-top: -1vh;
+  }
+
+  .main-div {
+    height: 10vh;
+    display: flex;
+    position: relative;
+    background-color: white;
+    align-items: center;
+  }
+
+
+  h1 {
+    font-size: 2.0vw;
+    margin-left: 5vw;
+  }
+}

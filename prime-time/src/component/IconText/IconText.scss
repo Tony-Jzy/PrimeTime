@@ -1,0 +1,50 @@
+.IconText {
+  display: flex;
+  background-color: transparent;
+  flex-direction: column;
+
+  margin: 0 2vw 0 2vw;
+
+  width: 14vw;
+  height: 18vw;
+
+  justify-content: center;
+  align-items: center;
+
+  .ring-container {
+    width: 13vw;
+    height: 13vw;
+    border-radius: 6.5vw;
+    overflow: hidden;
+    background-color: white;
+
+    transition: .2s ease-in-out;
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+    }
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .image-container {
+      width: 12vw;
+      height: 12vw;
+      border-radius: 6vw;
+      overflow: hidden;
+      img {
+        width: auto;
+        max-height: 12vw;
+        border-radius: 6vw;
+      }
+    }
+  }
+
+  .text-container {
+    font-family: Helvetica;
+    font-size: 1.5vw;
+    font-weight: bold;
+    color: white;
+  }
+}

@@ -1,0 +1,94 @@
+.Header {
+  position: fixed;
+  background-color: transparent;
+  top: 0;
+  width: 100%;
+  height: 5vw;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  z-index: 9;
+
+  p {
+    user-select: none;
+  }
+
+  h1 {
+    user-select: none;
+  }
+
+  .logo-container {
+    height: 8vw;
+    width: 8vw;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2vw;
+    border-radius: 4vw;
+    margin-top: 5vw;
+    margin-right: 2vw;
+
+    .logo {
+      animation: App-logo-spin infinite 20s linear;
+      height: 95%;
+    }
+
+  }
+
+  .header-title {
+    font-size: 1.8vw;
+    display: inline-block;
+    transition: .2s ease-in-out;
+    margin-right: 10vw;
+  }
+
+  .button-group {
+    display: flex;
+    flex-direction: row;
+    margin: 0 1vw 0 auto;
+
+    .header-button {
+      height: 2.5vw;
+      margin: 0 3.5vw 0 0;
+      font-size: 1.5vw;
+      font-weight: bold;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      transition: .2s ease-in-out;
+
+      a {
+        transition: .2s ease-in-out;
+        text-decoration: none;
+        &:visited {
+          color: white;
+        }
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .button-solid {
+      height: 2.5vw;
+      background-color: white;
+      color: #FEC239;
+      padding: 0 1vw 0 1vw;
+      border-radius: 1.25vw;
+
+      a {
+        text-decoration: none;
+        color: #FEC239;
+        &:visited {
+          color: #FEC239;
+        }
+      }
+
+    }
+  }
+}

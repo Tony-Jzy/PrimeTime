@@ -1,0 +1,40 @@
+.MediaCard{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fff;
+  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.2);
+  /* margin: auto; */
+  text-align: center;
+  margin-top: 20px;
+
+  .image-container{
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    & img {
+      width: 90%;
+      height: auto;
+      transform: scaleX(1);
+      box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  .text-container {
+    min-height: 100px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    .text-tab {
+      margin: auto;
+      display: flex;
+      flex-direction: row;
+      text-align: center;
+    }
+
+  }
+}

@@ -1,0 +1,22 @@
+.Checkbox {
+  background-color: transparent;
+  height: 1.2vw;
+  width: 1.2vw;
+  margin: 0 1.3vw 0 0;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+
+  img {
+    height: 100%;
+    width: 100%;
+    opacity: 0.2;
+  }
+
+  &.checked {
+    img {
+      opacity: 1;
+    }
+  }
+}

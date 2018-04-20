@@ -1,0 +1,46 @@
+.Intro{
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+
+  &.bg1 {
+    background-image: url("http://img.eservice-hk.net/upload/2017/07/07/120104_d2a8d8ea8dbb1865b83533e9b32c9bc3.jpg");
+  }
+  &.bg2 {
+    background-image: url("http://www.popnews.hk/wp-content/uploads/2017/11/15bc7cf9-3744-48e8-ad96-44586bd4a277.15bc7cf9-3742-45a4-ac3a-a3e4987b147f.jpg");
+  }
+
+  .slogan-div {
+    padding-top: 10vh;
+    height: 90vh;
+    width: 100vw;
+
+    display: flex;
+    align-items: center;
+
+    h1 {
+      font-family: AaCarrie;
+      font-size: 8vw;
+      margin-left: 10vw;
+    }
+  }
+
+  .feature-div {
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+
+    display: flex;
+    justify-content: center;
+
+    h1 {
+      font-size: 5vw;
+    }
+
+  }
+
+  .more-div {
+    height: 100vh;
+    width: 100vw;
+  }
+}

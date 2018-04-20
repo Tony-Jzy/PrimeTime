@@ -1,0 +1,52 @@
+.MainSearch {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  position: absolute;
+  width: 60vw;
+  height: 4vw;
+  bottom: 10vh;
+
+  background-color: transparent;
+  opacity: 1;
+  border-radius: 1vw;
+
+  flex-direction: row;
+
+
+  .input-container {
+    width: 90%;
+    height: 100%;
+    opacity: 1;
+    padding: 0 0 0 20px;
+    background-color:rgba(255,255,255,1);
+
+    input {
+      background: transparent;
+      border: 0;
+      width: 95%;
+      height: 100%;
+      outline: none;
+      font-size: 1.3vw ;
+      font-family: Helvetica;
+    }
+  }
+
+  .icon-container {
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    height: 100%;
+    background-color: #FDC00F;
+  }
+
+  .icon {
+    width:50%;
+    height: 30%;
+  }
+
+
+}

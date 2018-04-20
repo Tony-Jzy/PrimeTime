@@ -1,0 +1,287 @@
+.SignIn {
+  font-family: Helvetica;
+
+  min-height: 100vh;
+
+  p {
+    user-select: none;
+  }
+
+  .background {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    background-image: url('https://images.pexels.com/photos/347140/pexels-photo-347140.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+    .panel {
+      width: 65vw;
+      height: 40vw;
+      box-shadow: 2px 2px 3px grey;
+      background-color: white;
+      display: flex;
+      flex-direction: row;
+
+      .img-container {
+        width: 45%;
+        overflow: hidden;
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        img {
+          height: 100%;
+          width: auto;
+          transform: scaleX(-1);
+        }
+
+      }
+
+      .form-container {
+        width: 55%;
+        overflow: hidden;
+        height: 100%;
+
+
+        .signin-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          height: 100%;
+          width: 100%;
+
+          .name{
+            font-size: 80px;
+            color: #000;
+            margin-left: -150px;
+            margin-bottom: -15px;
+          }
+
+          .author{
+            font-size: 30px;
+            margin-left: 30px;
+          }
+
+          .input-section {
+            width: 80%;
+            height: 8%;
+            margin: 1vw 0 1vw 0;
+          }
+
+          .signin-button-section {
+            height: 8%;
+            width: 80%;
+            display: flex;
+            align-items: left;
+            justify-content: left;
+            margin-top: 2vw;
+            margin-left: 10vw;
+
+            .signin-button {
+              cursor: pointer;
+              color: white;
+              height: 100%;
+              width: 60%;
+              background-color: #ffcc00;
+              border-radius: 10px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              font-size: 2vw;
+            }
+
+          }
+
+          .also-can {
+            margin-bottom: -40px;
+            margin-left: -10px;
+          }
+
+
+          .button-section {
+            height: 8%;
+            width: 80%;
+            align-items: center;
+            justify-content: space-between;
+            display: flex;
+
+            .button-container {
+              height: 100%;
+              width: 45%;
+              color: white;
+              font-size: 1vw;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border-radius: 3px;
+              cursor: pointer;
+              margin-top: 5vw;
+
+              img {
+                height: 60%;
+                width: auto;
+                border-radius: 2px;
+                margin-right: 5%;
+              }
+
+              &.facebook {
+                background-color: #2E4585;
+              }
+
+              &.instagram {
+                background-color: #ff66cc;
+              }
+            }
+
+          }
+        }
+
+        .signup-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          height: 100%;
+          width: 100%;
+
+          .signup-button-section {
+            height: 8%;
+            width: 80%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            margin-top: 2vw;
+
+            .already {
+              margin: 0;
+              font-size: 1.3vw;
+              color: #FDC00F;
+              border-bottom: 1px solid #FDC00F;
+              cursor: pointer;
+            }
+
+            .signup-button {
+              cursor: pointer;
+              color: white;
+              height: 100%;
+              width: 25%;
+              background-color: #FDC00F;
+              border-radius: 3px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              font-size: 1.7vw;
+              margin-left: 1vw;
+            }
+
+          }
+
+          .email-pass-section {
+            width: 80%;
+            height: 30%;
+            display: flex;
+            flex-direction: column;
+            margin-top: 1vw;
+
+          }
+
+          .agree-section {
+            width: 80%;
+            height: 6%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            font-size: 1.3vw;
+
+            p {
+              color: #F9BF4F;
+            }
+
+            .hl-text {
+              border-bottom: 1px solid #F9BF4F;
+              cursor: pointer;
+            }
+
+          }
+
+          .selection-name-section {
+            width: 80%;
+            height: 20%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: -1vw;
+
+            .side {
+              width: 45%;
+              height: 100%;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              font-size: 1.2vw;
+
+              .top {
+                p {
+                  margin: 0 1vw 0 0;
+                  color: #FDC00F;
+                }
+
+                display: flex;
+                flex-direction: row;
+                align-items: flex-end;
+                width: 100%;
+                height: 20%;
+                margin-bottom: 1vw;
+              }
+
+              .bot {
+                width: 100%;
+                height: 75%;
+                display: flex;
+                flex-direction: row;
+                align-items: flex-end;
+              }
+
+            }
+
+
+          }
+
+
+
+        }
+
+        .tab-section {
+          display: flex;
+          width: 80%;
+          height: 10%;
+          align-items: center;
+          font-size: 1.6vw;
+          user-select: none;
+          margin: 10% 0 8% 0;
+
+          .hl-text {
+            color: #FDC00F;
+            border-bottom: 2px solid #FDC00F;
+          }
+
+          .link {
+            cursor: pointer;
+          }
+
+          p {
+            margin-right: 0.5vw;
+            color: rgba(0, 0, 0, 0.3);
+            padding-bottom: 0.4vw;
+          }
+
+
+        }
+
+      }
+    }
+
+  }
+}

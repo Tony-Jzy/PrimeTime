@@ -1,0 +1,102 @@
+.HomePage {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-image: url("http://i0.hdslb.com/bfs/archive/ccdf0df68330402d4d2e8eed70f14909a73c3a0e.jpg");
+  background-size: auto; }
+  .HomePage .logo {
+    animation: App-logo-spin infinite 20s linear;
+    height: 75%; }
+  .HomePage .cate-Icon {
+    height: 60%;
+    margin: 0 5vw 0 5vw;
+    transition: .2s ease-in-out; }
+    .HomePage .cate-Icon:hover {
+      cursor: pointer;
+      transform: scale(1.1); }
+  .HomePage .header {
+    position: relative;
+    background-color: #222;
+    height: 10vh;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center; }
+    .HomePage .header .header-button {
+      height: 45%;
+      border-bottom: 1px solid white;
+      margin: 0 5vw 0 0;
+      font-size: 1.4em;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      transition: .2s ease-in-out; }
+      .HomePage .header .header-button:hover {
+        color: gold;
+        border-bottom: 1px solid gold;
+        cursor: pointer; }
+    .HomePage .header .button-solid {
+      background-color: white;
+      color: #222;
+      border-bottom: none;
+      padding: 0 1vw 0 1vw;
+      margin: 0 2vw 0 auto; }
+      .HomePage .header .button-solid:hover {
+        border-bottom: none;
+        cursor: pointer;
+        color: white;
+        background-color: #0076FF; }
+  .HomePage .title {
+    font-size: 1.8em;
+    display: inline-block;
+    transition: .2s ease-in-out;
+    margin-right: 10vw; }
+    .HomePage .title:hover {
+      color: gold;
+      cursor: pointer; }
+  .HomePage .intro {
+    font-size: large; }
+  .HomePage .search-div {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 90vh;
+    width: 100vw;
+    position: relative; }
+  .HomePage .category-div {
+    position: relative;
+    height: 30vh;
+    width: 100vw;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; }
+  .HomePage .intro-div {
+    position: relative;
+    background-color: #222;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column; }
+    .HomePage .intro-div .intro-title {
+      color: white;
+      font-size: 5em; }
+  .HomePage .divider {
+    position: relative;
+    margin: 2vh 0 2vh 0;
+    height: 1px;
+    width: 80vw;
+    background-color: white; }
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
+/*# sourceMappingURL=HomePage.css.map */
