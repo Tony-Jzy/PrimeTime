@@ -48,8 +48,21 @@ class Media {
             ),JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
 
         } else {
+//            $this->fetchMedia($uid, $start, $pageSize);
+            $medias = $this->db->fetch_all("SELECT * FROM ".DB_PRE."user_media WHERE uid = $uid ORDER BY created DESC LIMIT $start, $pageSize");
+            $data = array();
+            foreach ($medias as $key => $media) {
+                $tableName = $this->utils->formTableName($media['mid']);
+                $insMedia = $this->db->fetch_all("SELECT * FROM $tableName WHERE id = '".$media['mid']."'");
+                $data[] = $insMedia[0];
+            }
+            echo json_encode(array(
+                'error' => '',
+                'success' => true,
+                'data' => $data
+            ),JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
             $this->base->initInstagram($cacheCheck[0]['ins_username'], $cacheCheck[0]['ins_password'], $start+$pageSize);
-            $this->fetchMedia($uid, $start, $pageSize);
+
         }
     }
 

@@ -27,5 +27,5 @@ $db_pre = 'prime_time_';
 $baseAccount = "jzy_tony";
 $basePassword = "JzyMucun1996";
 
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+//error_reporting(E_ALL);
+//ini_set('display_errors', 1);

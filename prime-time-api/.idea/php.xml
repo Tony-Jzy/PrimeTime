@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/api/vendor/predis/predis" />
+      <path value="$PROJECT_DIR$/api/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/api/vendor/mashape/unirest-php" />
+      <path value="$PROJECT_DIR$/api/vendor/phpfastcache/phpssdb" />
+      <path value="$PROJECT_DIR$/api/vendor/phpfastcache/phpfastcache" />
+      <path value="$PROJECT_DIR$/api/vendor/raiym/instagram-php-scraper" />
+      <path value="$PROJECT_DIR$/api/vendor/composer" />
+    </include_path>
+  </component>
+</project>

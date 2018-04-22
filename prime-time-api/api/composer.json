@@ -1,5 +1,5 @@
 {
     "require": {
-        "raiym/instagram-php-scraper": "^0.8.19"
+        "raiym/instagram-php-scraper": "^0.8.20"
     }
 }

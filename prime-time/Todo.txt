@@ -1,0 +1,5 @@
+- Code Splitting: https://reactjs.org/docs/code-splitting.html
+- Redux setup
+- Testing, Enzyme setup
+- Router setup : REACT-ROUTER-DOM
+- Classnames: className={cx('small', 'text-muted')}

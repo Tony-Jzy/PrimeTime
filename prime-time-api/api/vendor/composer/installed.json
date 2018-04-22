@@ -289,17 +289,17 @@
     },
     {
         "name": "raiym/instagram-php-scraper",
-        "version": "v0.8.19",
-        "version_normalized": "0.8.19.0",
+        "version": "v0.8.20",
+        "version_normalized": "0.8.20.0",
         "source": {
             "type": "git",
             "url": "https://github.com/postaddictme/instagram-php-scraper.git",
-            "reference": "c441ac511e18bc2325b7e7f7f8ab7237609b5c63"
+            "reference": "817932a43234cd543f5feb536a2a3f0e21d3939a"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/postaddictme/instagram-php-scraper/zipball/c441ac511e18bc2325b7e7f7f8ab7237609b5c63",
-            "reference": "c441ac511e18bc2325b7e7f7f8ab7237609b5c63",
+            "url": "https://api.github.com/repos/postaddictme/instagram-php-scraper/zipball/817932a43234cd543f5feb536a2a3f0e21d3939a",
+            "reference": "817932a43234cd543f5feb536a2a3f0e21d3939a",
             "shasum": ""
         },
         "require": {
@@ -310,7 +310,7 @@
         "require-dev": {
             "phpunit/phpunit": "5.5.*"
         },
-        "time": "2018-04-18T15:49:22+00:00",
+        "time": "2018-04-20T08:26:03+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
