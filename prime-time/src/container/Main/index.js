@@ -58,20 +58,48 @@ class Main extends Component {
         return (
             <div className={'SignIn'}>
                 <div className={'background'}>
-                    <div className={'panel'}>
-                        <div className={'img-container'}>
-                            <img src={'https://images.pexels.com/photos/816708/pexels-photo-816708.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'} />
+                    <div className={'head'}>
+                        <div>
+                        <p className={'name1'}> P </p>
+                        <p className={'name2'}> R </p>
+                        <p className={'name3'}> I </p>
+                        <p className={'name2'}> M </p>
+                        <p className={'name1'}> E </p>
                         </div>
+                    <div className={'head2'}>
+                        <div>
+                        <p className={'name3'}> T </p>
+                        <p className={'name2'}> I </p>
+                        <p className={'name1'}> M </p>
+                        <p className={'name2'}> E </p>
+                        </div>
+                    <div className={'subtitle'}>
+                        <div>
+                        <p className={'firstword'}> It </p>
+                        </div>
+                        <div>
+                        <p className={'content'}> is </p>
+                        </div>
+                        <div>
+                        <p className={'highlight'}> time </p>
+                        </div>
+                        <div>
+                        <p className={'content'}> to </p>
+                        </div>
+                        <div>
+                        <p className={'highlight'}> post </p>
+                        </div>
+                        <div>
+                        <p className={'content'}> . </p>
+                        </div>
+                    <div className={'panel'}>
                         <div className={'form-container'}>
                             {
                                 !this.state.signUpForm ?
                                     <div className={'signin-container'}>
                                         <div className={'title'}>
                                             <div>
-                                                <p className={'name'}> PrimeTime </p>
-                                            </div>
-                                            <div>
-                                                <p className={'author'}> by CS411 Team 2 </p>
+                                                <p className={'subname'}> log in </p>
                                             </div>
                                          </div>
 
@@ -84,6 +112,7 @@ class Main extends Component {
                                                 value={this.state.username}
                                                 title={'Account:'}
                                                 type={'text'}
+                                                color={'white'}
                                                 />
                                         </div>
                                         <div className={'input-section'}>
@@ -100,7 +129,7 @@ class Main extends Component {
 
                                         <div className={'signin-button-section'}>
                                             <div className={'signin-button'} onClick={this.handleLogin}>
-                                                <p>Login</p>
+                                                <p>Sign In</p>
                                             </div>
                                         </div>
 
@@ -117,6 +146,10 @@ class Main extends Component {
                                                 <img src={INS_LOGO} />
                                                 <p> Instagram</p>
                                             </div>
+                                        </div>
+
+                                        <div className={'author'}>
+                                            <p> By CS411 Team2</p>
                                         </div>
 
                                     </div>
@@ -236,6 +269,9 @@ class Main extends Component {
 
                     </div>
                 </div>
+                </div>
+                </div>
+            </div>
             </div>
         );
     }
