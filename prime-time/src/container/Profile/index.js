@@ -22,6 +22,14 @@ const StyledProfileCard = styled.div`
   text-align: center;
   margin-bottom: 20px;
 `
+const StyledProfileCard2 = styled.div`
+    position: fixed;
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.5);
+    background-color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 0 2.8rem;
+`
 
 const StyledImgContainer = styled.div`
   height: 150px;
@@ -183,6 +191,13 @@ class Profile extends Component {
                                     {this.state.userInfo.ins_username}
                                 </StyledDescription>
                             </StyledProfileCard>
+                            
+
+                            <StyledProfileCard2>
+                              <StyledName>{'Prime Post ='}</StyledName>
+                            </StyledProfileCard2>
+                       
+
                         </div>
 
                         <div className={'signin-container'}>
