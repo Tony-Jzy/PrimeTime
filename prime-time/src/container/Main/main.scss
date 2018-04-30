@@ -1,5 +1,5 @@
 .SignIn {
-  font-family: Helvetica;
+  font-family: "Gill Sans", sans-serif;
 
   min-height: 100vh;
 
@@ -11,22 +11,177 @@
     height: 100vh;
     width: 100vw;
     position: absolute;
-    background-image: url('https://images.pexels.com/photos/347140/pexels-photo-347140.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    background-image:url(https://www.shootfactory.co.uk/wp-content/uploads/2018/03/Mobile-Phone-Photography.png);
     background-size: cover;
     justify-content: center;
     align-items: center;
     display: flex;
+    .head {
+      position: inherit;
+      right: 80%;
+      top: 25%;
+      display: inline;
+      width: 20vw;
+
+      .name1{
+        text-align: center;
+        font-size: 55px;
+        color: rgba(255,255,255,1);
+        margin-left: 0px;
+        margin-bottom: 0px;
+        width: 4vw;
+        height: 4.5vw;
+        background: rgba(255,255,255,0.6);
+        float: left;
+      }
+
+      .name2{
+        text-align: center;
+        font-size: 55px;
+        color: rgba(255,255,255,1);
+        margin-left: 0px;
+        margin-bottom: 0px;
+        width: 4vw;
+        height: 4.5vw;
+        background: rgba(255,255,255,0.4);
+        float: left;
+      }
+
+      .name3{
+        text-align: center;
+        font-size: 55px;
+        color: rgba(255,255,255,1);
+        margin-left: 0px;
+        margin-bottom: 0px;
+        width: 4vw;
+        height: 4.5vw;
+        background: rgba(255,255,255,0.2);
+        float: left;
+      }
+    }
+
+
+    .head2 {
+      position: relative;
+      left: 60%;
+      top:0%;
+      display: inline;
+      width: 20vw;
+      .name1{
+        text-align: center;
+        font-size: 55px;
+        color: rgba(255,255,255,1);
+        margin-left: 0px;
+        margin-bottom: 0px;
+        width: 4vw;
+        height: 4.5vw;
+        background: rgba(255,255,255,0.6);
+        float: left;
+      }
+
+      .name2{
+        text-align: center;
+        font-size: 55px;
+        color: rgba(255,255,255,1);
+        margin-left: 0px;
+        margin-bottom: 0px;
+        width: 4vw;
+        height: 4.5vw;
+        background: rgba(255,255,255,0.4);
+        float: left;
+      }
+
+      .name3{
+        text-align: center;
+        font-size: 55px;
+
+        color: rgba(255,255,255,1);
+        margin-left: 0px;
+        margin-bottom: 0px;
+        width: 4vw;
+        height: 4.5vw;
+        background: rgba(255,255,255,0.2);
+        float: left;
+      }
+    }
+
+    .subtitle {
+      text-align: center;
+      position: fixed;
+      right: 70%;
+      bottom: 20%;
+      width: 30vw;
+      height: 10vw;
+      box-shadow: 2px 2px 3px grey;
+      background: rgba(255,255,255,1);
+      display: flex;
+
+      .content {
+          position: relative;
+          top:35%;
+          display: run-in;
+          text-align: center;
+          font-size: 25px;
+          font-weight: 700;
+          text-transform: uppercase;
+          color: #000;
+          margin-left: 10px;
+          margin-bottom: -15px;
+      }
+      .firstword {
+          position: relative;
+          top:30%;
+          margin-top: 5vw;
+          display:inline;
+          font-size: 25px;
+          font-weight: bold;
+          text-transform: uppercase;
+          color: #2F4F4F;
+          margin-left: 65px;
+      }
+      .highlight {
+          position: relative;
+          top:30%;
+          display:inline;
+          font-size: 25px;
+          font-weight: bold;
+          text-align: center;
+          text-transform: uppercase;
+          color: #4682B4;
+          margin-left: 10px;
+          margin-bottom: -15px;
+      }
+
+    }
 
     .panel {
-      width: 65vw;
-      height: 40vw;
+      position: fixed;
+      left: 65%;
+      top:5%;
+      width: 30vw;
+      height: 50vw;
       box-shadow: 2px 2px 3px grey;
-      background-color: white;
+      background: rgba(255,255,255,0.4);
       display: flex;
       flex-direction: row;
 
       .img-container {
-        width: 45%;
+        width: 100%;
+        overflow: hidden;
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        img {
+          height: 17vw;
+          width: 17vw;
+          margin: 0vw;
+          display:run-in;
+        }
+
+      }
+      .img-container2 {
+        width: 100%;
         overflow: hidden;
         height: 100%;
         display: flex;
@@ -34,14 +189,14 @@
 
         img {
           height: 100%;
-          width: auto;
+          width: 100%;
+
           transform: scaleX(-1);
         }
-
       }
 
       .form-container {
-        width: 55%;
+        width: 100%;
         overflow: hidden;
         height: 100%;
 
@@ -50,43 +205,66 @@
           display: flex;
           flex-direction: column;
           align-items: center;
-          height: 100%;
+          height: 60%;
           width: 100%;
 
           .name{
-            font-size: 80px;
-            color: #000;
-            margin-left: -150px;
+            text-transform: uppercase;
+            text-align: center;
+            position: fixed;
+            top:10%;
+            right: 7%;
+            font-size: 30px;
+            font-weight: 700;
+            color: #dddddd;
+            margin-left: 0px;
             margin-bottom: -15px;
           }
 
-          .author{
-            font-size: 30px;
-            margin-left: 30px;
+          .subname{
+            text-align: center;
+            position: fixed;
+            top:16%;
+            right: 7%;
+            font-size: 50px;
+            text-decoration: underline;
+            text-transform: uppercase;
+            text-shadow: 2px 2px #222222;
+            font-weight: 700;
+            color: #eeeeee;
+            margin-left: 0px;
           }
 
           .input-section {
+            position: relative;
+            top: 50%;
             width: 80%;
-            height: 8%;
-            margin: 1vw 0 1vw 0;
+            font-size: 30pt;
+            height: 6%;
+            margin: 1vw 1vw 1vw 1vw;
           }
 
           .signin-button-section {
-            height: 8%;
+            position: relative;
+            top: 50%;
+            height: 9%;
             width: 80%;
             display: flex;
+            font-weight: 600;
             align-items: left;
             justify-content: left;
             margin-top: 2vw;
             margin-left: 10vw;
 
             .signin-button {
+              position: relative;
+              top: 50%;
               cursor: pointer;
               color: white;
               height: 100%;
               width: 60%;
-              background-color: #ffcc00;
-              border-radius: 10px;
+              background-color: #00CED1;
+              border-radius: 15px;
               display: flex;
               justify-content: center;
               align-items: center;
@@ -96,12 +274,20 @@
           }
 
           .also-can {
+            position: relative;
+            top: 55%;
+            font-size: 15px;
+            font-weight: 600;
+            color: #222222;
+            text-transform: uppercase;
             margin-bottom: -40px;
             margin-left: -10px;
           }
 
 
           .button-section {
+            position: relative;
+            top: 55%;
             height: 8%;
             width: 80%;
             align-items: center;
@@ -137,6 +323,19 @@
             }
 
           }
+
+          .author {
+            position: relative;
+            top: 80%;
+            font-size: 20px;
+            font-weight: 600;
+            font-style: italic;
+            color: #222222;
+            text-transform: uppercase;
+            margin-bottom: -40px;
+            margin-left: 150px;
+          }
+
         }
 
         .signup-container {
