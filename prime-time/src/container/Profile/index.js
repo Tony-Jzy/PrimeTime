@@ -160,7 +160,6 @@ class Profile extends Component {
                     <div className={'background'}>
                         <div className={'panel'}>
                             <div className={'img-container'}>
-                                <img src={'https://images.pexels.com/photos/816708/pexels-photo-816708.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'} />
                                 <StyledProfileCard>
                                     <StyledImgContainer>
                                         <img src={'https://images.pexels.com/photos/816708/pexels-photo-816708.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'} alt="duck" />
