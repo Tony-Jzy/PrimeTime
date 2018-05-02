@@ -11,18 +11,6 @@ import './fade.css';
 
 const Loading = () => <div></div>;
 
-const HomePage = Loadable({
-    loader: () => import('../../container/HomePage'),
-    loading: Loading,
-});
-const Intro = Loadable({
-    loader: () => import('../../container/Intro'),
-    loading: Loading,
-});
-const SignIn = Loadable({
-    loader: () => import('../../container/SignIn'),
-    loading: Loading,
-});
 const Main = Loadable({
     loader: () => import('../../container/Main'),
     loading: Loading,
@@ -46,8 +34,6 @@ const App = () => (
                                 path="/"
                                 component={Main}
                             />
-                            <Route exact path="/signin" component={SignIn} />
-                            <Route exact path="/intro" component={Intro} />
                             <Route exact path="/profile" component={Profile} />
                         </Switch>
                     </CSSTransition>

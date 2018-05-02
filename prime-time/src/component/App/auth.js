@@ -36,9 +36,5 @@ export const update = newState => {
 };
 
 export const retrieve = () => {
-    return state.userInfo;
-};
-
-export const authenticate = () => {
-    return state.authenInfo;
+    return state;
 };

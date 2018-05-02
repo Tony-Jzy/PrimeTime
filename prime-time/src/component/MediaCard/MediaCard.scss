@@ -7,11 +7,13 @@
   /* margin: auto; */
   text-align: center;
   margin-top: 20px;
+  border-radius: 10px;
 
   .image-container{
-    padding-top: 30px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
 
     & img {
       width: 90%;

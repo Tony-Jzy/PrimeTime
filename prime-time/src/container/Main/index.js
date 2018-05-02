@@ -1,23 +1,26 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
 import { withRouter } from "react-router-dom";
-
+import {update} from '../../component/App/auth';
 import './main.scss';
 import './main.css'
-import FB_LOGO from './assets/facebook.png';
 import INS_LOGO from './assets/instagram.png';
-
 import InputForm from '../../component/InputForm';
-import Checkbox from '../../component/Checkbox';
 
-import { update, withAuth } from '../../component/App/auth';
-import * as ENDPOINT from '../../endpoint';
+import * as ENDPOINT from '../../component/App/endpoint';
+import {INS_AUTHORIZATION} from "../../component/App/endpoint";
+import {INS_TOKEN_REQUEST} from "../../component/App/endpoint";
+import {ins_client_id} from "../../component/App/endpoint";
+import {ins_client_secret} from "../../component/App/endpoint";
+import {ins_grant_type} from "../../component/App/endpoint";
+import {ins_redirect_uri} from "../../component/App/endpoint";
 
-
-
+let URLSearchParams = require('url-search-params');
 
 
 class Main extends Component {
+
+
 
     constructor() {
         super();
@@ -45,7 +48,6 @@ class Main extends Component {
             return response.json()
         }) .then(
             json => {
-                console.log(json);
                 update(json.data);
                 this.setState({isLogin:true});
                 this.props.history.push('/profile');
@@ -55,10 +57,63 @@ class Main extends Component {
             }
         )
     };
+
+    InsAuthorBegin = () => {
+        window.location.href = INS_AUTHORIZATION;
+    };
+
+    InsTokenRequest = () => {
+
+        const search = this.props.location.search;
+        const params = new URLSearchParams(search);
+        const code = params.get('code');
+
+        let data = {
+            client_id : ins_client_id,
+            client_secret : ins_client_secret,
+            grant_type : ins_grant_type,
+            redirect_uri : ins_redirect_uri,
+            code : code
+        };
+
+        let formData = new FormData();
+
+        for (let name in data) {
+            formData.append(name, data[name])
+        }
+
+        fetch(`${INS_TOKEN_REQUEST}`,{
+            method: 'POST',
+            body : formData
+        }).then( response => {
+            return response.json()
+        }) .then(
+            json => {
+                console.log(json);
+                localStorage.setItem("userInfo", JSON.stringify(json));
+                update(json);
+                if (json.access_token !== undefined) {
+                    this.props.history.push('/profile')
+                }
+            },
+            error => {
+                console.log(error);
+            }
+        )
+    };
+
+    componentWillMount() {
+        if (this.props.location.search !== "") {
+            const params = new URLSearchParams(this.props.location.search);
+            const code = params.get('code');
+
+            if (code !== null || code !== "") {
+                this.InsTokenRequest()
+            }
+        }
+    }
+
     render() {
-        // if (this.state.isLogin === true) {
-        //     return <BrowserRouter path={'/profile'}/>
-        // }
         return (
             <div className={'SignIn'}>
 
@@ -106,15 +161,36 @@ class Main extends Component {
                         </div>
                     <div className={'panel'}>
                         <div className={'form-container'}>
-                            {
-                                !this.state.signUpForm ?
-                                    <div className={'signin-container'}>
-                                        <div className={'title'}>
-                                            <div>
-                                                <p className={'subname'}> log in </p>
-                                            </div>
-                                         </div>
+                            <div className={'signin-container'}>
+                                <div className={'title'}>
+                                    <div>
+                                        <p className={'subname'}> log in </p>
+                                    </div>
+                                </div>
 
+                                <div className={'input-section'}>
+                                    <InputForm
+                                        handleChange={(event) => {
+                                            this.setState({username: event.target.value})
+                                        }}
+                                        placeholder={''}
+                                        value={this.state.username}
+                                        title={'Account:'}
+                                        type={'text'}
+                                        color={'white'}
+                                    />
+                                </div>
+                                <div className={'input-section'}>
+                                    <InputForm
+                                        handleChange={(event) => {
+                                            this.setState({pass: event.target.value})
+                                        }}
+                                        placeholder={''}
+                                        value={this.state.pass}
+                                        title={'Password:'}
+                                        type={'password'}
+                                    />
+                                </div>
                                         <div className={'input-section'}>
                                             <InputForm
                                                 handleChange={(event) => {
@@ -139,151 +215,34 @@ class Main extends Component {
                                             />
                                         </div>
 
-                                        <div className={'signin-button-section'}>
-                                            <div className={'signin-button'} onClick={this.handleLogin}>
-                                                <p>Sign In</p>
-                                            </div>
-                                        </div>
-
-                                        <div className={'also-can'}>
-                                            <p> You can also login with</p>
-                                        </div>
-
-                                        <div className={'button-section'}>
-                                            <div className={classNames('button-container', 'facebook')}>
-                                                <img src={FB_LOGO} />
-                                                <p> Facebook</p>
-                                            </div>
-                                            <div className={classNames('button-container', 'instagram')}>
-                                                <img src={INS_LOGO} />
-                                                <p> Instagram</p>
-                                            </div>
-                                        </div>
-
-                                        <div className={'author'}>
-                                            <p> By CS411 Team2</p>
-                                        </div>
-
+                                <div className={'signin-button-section'}>
+                                    <div className={'signin-button'} onClick={this.handleLogin}>
+                                        <p>Sign In</p>
                                     </div>
-                                    :
-                                    <div className={'signup-container'}>
-                                        <div className={'tab-section'}>
-                                            <div onClick={this._handleChangeTab}>
-                                                <p className={'link'}> Sign in </p>
-                                            </div>
-                                            <p> or </p>
-                                            <div>
-                                                <p className={'hl-text'}> Sign up </p>
-                                            </div>
-                                        </div>
+                                </div>
 
-                                        <div className={'selection-name-section'}>
-                                            <div className={'side'} >
-                                                <div className={'top'}>
-                                                    <p>I am a trainee</p>
-                                                    <Checkbox
-                                                        checked={this.state.isTrainee}
-                                                        handleClick={()=> {
-                                                            this.setState({
-                                                                isTrainee: !this.state.isTrainee
-                                                            })
-                                                        }}
-                                                        />
-                                                </div>
-                                                <div className={'bot'}>
-                                                    <InputForm
-                                                        handleChange={(event) => {
-                                                            this.setState({firstname: event.target.value})
-                                                        }}
-                                                        placeholder={''}
-                                                        value={this.state.firstname}
-                                                        title={'FIRST NAME'}
-                                                        type={'text'}
-                                                    />
-                                                </div>
+                                <div className={'also-can'}>
+                                    <p> You can also login with</p>
+                                </div>
 
-                                            </div>
-                                            <div className={'side'}>
-                                                <div className={'top'}>
-                                                    <p>I am a trainer</p>
-                                                    <Checkbox
-                                                        checked={this.state.isTrainer}
-                                                        handleClick={()=> {
-                                                            this.setState({
-                                                                isTrainer: !this.state.isTrainer
-                                                            })
-                                                        }}
-                                                    />
-                                                </div>
-                                                <div className={'bot'}>
-                                                    <InputForm
-                                                        handleChange={(event) => {
-                                                            this.setState({lastname: event.target.value})
-                                                        }}
-                                                        placeholder={''}
-                                                        value={this.state.lastname}
-                                                        title={'LAST NAME'}
-                                                        type={'text'}
-                                                    />
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className={'email-pass-section'}>
-                                            <div className={'input-section'}>
-                                                <InputForm
-                                                    handleChange={(event) => {
-                                                        this.setState({newemail: event.target.value})
-                                                    }}
-                                                    placeholder={''}
-                                                    value={this.state.newemail}
-                                                    title={'EMAIL'}
-                                                    type={'text'}
-                                                />
-                                             </div>
-                                                <div className={'input-section'}>
-                                                <InputForm
-                                                    handleChange={(event) => {
-                                                        this.setState({newpass: event.target.value})
-                                                    }}
-                                                    placeholder={''}
-                                                    value={this.state.pass}
-                                                    title={'Password'}
-                                                    type={'password'}
-                                                />
-                                            </div>
-                                        </div>
-
-                                        <div className={'agree-section'} >
-                                            <Checkbox
-                                                checked={this.state.agreeToTerm}
-                                                handleClick={()=> {
-                                                    this.setState({
-                                                        agreeToTerm: !this.state.agreeToTerm
-                                                    })
-                                                }}
-                                            />
-
-                                            <p> I agree to the &nbsp;</p>
-                                            <p className={'hl-text'}> terms of services </p>
-                                        </div>
-
-                                        <div className={'signup-button-section'}>
-                                            <div onClick={this._handleChangeTab}>
-                                                <p className={'already'}> Already have an account? </p>
-                                            </div>
-                                            <div className={'signup-button'}>
-                                                <p>Sign up</p>
-                                            </div>
-                                        </div>
+                                <div className={'button-section'}>
+                                    <div className={classNames('button-container', 'instagram')} onClick={this.InsAuthorBegin}>
+                                        <img src={INS_LOGO} />
+                                        <p> Instagram</p>
                                     </div>
-                            }
+                                </div>
+
+                                <div className={'author'}>
+                                    <p> By CS411 Team2</p>
+                                </div>
+
+                            </div>
                         </div>
 
                     </div>
                 </div>
                 </div>
                 </div>
-            </div>
             </div>
             </div>
         );
