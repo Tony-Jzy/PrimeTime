@@ -1,5 +1,6 @@
 .Profile {
-  font-family: Helvetica;
+  font-family: "Gill Sans", sans-serif;
+
 
   min-height: 100vh;
 
@@ -11,7 +12,7 @@
     height: 100vh;
     width: 100vw;
     position: absolute;
-    background-image: url('https://images.pexels.com/photos/347140/pexels-photo-347140.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    background-image: url('http://www.itsworthashot.com/wp-content/uploads/2017/12/Huawei_Flatlay_01.jpg');
     background-size: cover;
     justify-content: center;
     align-items: center;
@@ -31,6 +32,8 @@
         height: 100%;
         display: flex;
         align-items: center;
+        background:#EEDFCC;
+        background-size: cover;
 
         img {
           height: 100%;
