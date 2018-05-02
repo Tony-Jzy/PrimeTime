@@ -13,6 +13,10 @@ import Checkbox from '../../component/Checkbox';
 import { update, withAuth } from '../../component/App/auth';
 import * as ENDPOINT from '../../endpoint';
 
+
+
+
+
 class Main extends Component {
 
     constructor() {
@@ -57,6 +61,11 @@ class Main extends Component {
         // }
         return (
             <div className={'SignIn'}>
+
+                <div className={'banner'}>
+                    <div id="pic3"></div>
+                    <div id="pic2"></div>
+                    <div id="pic1"></div>
                 <div className={'background'}>
                     <div className={'head'}>
                         <div>
@@ -75,10 +84,7 @@ class Main extends Component {
                         </div>
                     <div className={'subtitle'}>
                         <div>
-                        <p className={'firstword'}> It </p>
-                        </div>
-                        <div>
-                        <p className={'content'}> is </p>
+                        <p className={'content'}> It is  </p>
                         </div>
                         <div>
                         <p className={'highlight'}> time </p>
@@ -87,10 +93,16 @@ class Main extends Component {
                         <p className={'content'}> to </p>
                         </div>
                         <div>
-                        <p className={'highlight'}> post </p>
+                        <p className={'highlight'}>   post </p>
                         </div>
                         <div>
-                        <p className={'content'}> . </p>
+                        <p className={'content'}> now. </p>
+                        </div>
+                        <div>
+                        <p className={'subcontent'}> #Instagram </p>
+                        </div>
+                        <div>
+                        <p className={'firstword'}> #PrimeTime </p>
                         </div>
                     <div className={'panel'}>
                         <div className={'form-container'}>
@@ -108,9 +120,9 @@ class Main extends Component {
                                                 handleChange={(event) => {
                                                     this.setState({username: event.target.value})
                                                 }}
-                                                placeholder={''}
+                                                title={'UserName'}
+                                                placeholder={'UserName'}
                                                 value={this.state.username}
-                                                title={'Account:'}
                                                 type={'text'}
                                                 color={'white'}
                                                 />
@@ -120,9 +132,9 @@ class Main extends Component {
                                                 handleChange={(event) => {
                                                     this.setState({pass: event.target.value})
                                                 }}
-                                                placeholder={''}
+                                                title={'Password'}
+                                                placeholder={'Password'}
                                                 value={this.state.pass}
-                                                title={'Password:'}
                                                 type={'password'}
                                             />
                                         </div>
@@ -271,6 +283,7 @@ class Main extends Component {
                 </div>
                 </div>
                 </div>
+            </div>
             </div>
             </div>
         );
