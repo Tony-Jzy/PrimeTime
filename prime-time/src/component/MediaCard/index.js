@@ -1,14 +1,9 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
 import * as moment from 'moment';
 
 import './MediaCard.scss'
 
 export default class MediaCard extends Component {
-    constructor() {
-        super();
-
-    }
 
     dateString = (timestamp) => {
         let t = new Date(timestamp*1000);
