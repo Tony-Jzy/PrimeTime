@@ -124,7 +124,6 @@ class Profile extends Component {
 
 
     render() {
-
         if (this.state.isLoaded === false) {
             return (
                 <div className={'Profile'}>

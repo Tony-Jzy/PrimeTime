@@ -2,6 +2,8 @@ export const BASE = 'https://api.shinji.io/api';
 
 export const LOGIN = '/Account/login.php';
 export const FETCH_MEDIA = '/Media/fetch.php';
+export const FETCH_BY_LOGIN = '/Media/fetchByLogin.php';
+
 
 
 export const ins_client_id = '05fceba239c642a0947a5bb58265e3ea';
